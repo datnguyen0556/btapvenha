@@ -1,0 +1,45 @@
+package bt;
+
+import java.util.Scanner;
+
+public class cau2 {
+	  static String tenSP;
+	  static double donGia;
+	  static double giamGia;
+	private double getThueThuNhap;
+	public Scanner input;
+	 void nhap() {
+		input = new Scanner (System.in);
+		System.out.print("\nNhap ten sp : ");
+		tenSP=input.nextLine();
+		System.out.print("\nNhap don gia : ");
+		donGia=input.nextDouble();
+		System.out.print("\nGiam gia :"+giamGia);
+		giamGia=input.nextDouble();
+	}
+	public void xuat() {
+		System.out.print("\nTen SP : "+tenSP);
+		System.out.print("\nDon gia : "+donGia);
+		System.out.print("\nThue thu nhap : "+(0.1*donGia));
+		System.out.print("\nGiam gia : "+giamGia);
+	}
+	public SanPham(String tenSP, double donGia, double giamGia) {
+		this.tenSP=tenSP;
+		this.donGia=donGia;
+		this.giamGia=giamGia;
+	}
+	public SanPham(String tenSP, double donGia) {
+		this(tenSP,donGia,0);
+	}
+	public static void main(String[] args) {
+		SanPham sp1=new SanPham(tenSP,donGia);
+		sp1.nhap();
+		SanPham sp2=new SanPham(tenSP,donGia,giamGia);
+		sp2.nhap();
+		
+		System.out.print("Xuat thong tin : ");
+		sp1.xuat();
+		sp2.xuat();
+	}
+
+}

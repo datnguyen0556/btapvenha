@@ -1,0 +1,39 @@
+package src;
+
+import java.util.Scanner;
+
+public class cau3 {
+    String tenSp;
+    Double donGia;
+    Double giamGia;
+    Double ThueNhapKhau;
+    void ThueNhapKhau(){
+        ThueNhapKhau = (donGia * 10) / 100;
+    }
+    void nhapsp(){
+        System.out.println("nhap ten san pham: ");
+        Scanner sc = new Scanner(System.in);
+        tenSp = sc.next();
+        System.out.println("nhap don gia: ");
+        donGia = sc.nextDouble();
+        System.out.println("nhap ma giam gia: ");
+        giamGia = sc.nextDouble();
+        sc.close();
+    }
+    void xuatsp(){
+        System.out.println("Ten san pham: "+ tenSp);
+        System.out.println("Don gia: "+ donGia);
+        System.out.println("Giam gia: "+ giamGia);
+        System.out.println("Thue nhap khau: "+ ThueNhapKhau);
+    }
+    public static void main(String[] args){
+    	SanPham sp1,sp2;
+        sp1=new SanPham();
+        sp2 = new SanPham();
+        sp1.nhapsp();
+        sp2.nhapsp();
+       sp1.xuatsp();
+        sp2.xuatsp();
+        
+    }
+}
